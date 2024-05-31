@@ -85,7 +85,7 @@ class MyHomePage extends StatelessWidget {
             label: 'Cart',
           ),
         ],
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Colors.amber[750],
         unselectedItemColor: Colors.black,  // 10% of the design color
         backgroundColor: Colors.white,  // 60% of the design color
       ),
