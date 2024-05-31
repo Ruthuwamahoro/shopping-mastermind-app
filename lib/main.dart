@@ -10,7 +10,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.white,  // 30% of the design color
       appBar: AppBar(
         title: Text(
           'Shopping Mastermind',
@@ -21,7 +21,7 @@ class MyHomePage extends StatelessWidget {
           ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.blue[900],
+        backgroundColor: Colors.blue[900],  // 60% of the design color
       ),
       body: Center(
         child: ListView(
@@ -29,7 +29,7 @@ class MyHomePage extends StatelessWidget {
           children: <Widget>[
             Text(
               'Shopping List',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black),  // 10% of the design color
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 20),
@@ -37,15 +37,15 @@ class MyHomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Chip(
-                  label: Text('Groceries'),
+                  label: Text('Groceries', style: TextStyle(color: Colors.white)),
                   backgroundColor: Colors.green[300],
                 ),
                 Chip(
-                  label: Text('Electronics'),
+                  label: Text('Electronics', style: TextStyle(color: Colors.white)),
                   backgroundColor: Colors.blue[300],
                 ),
                 Chip(
-                  label: Text('Clothes'),
+                  label: Text('Clothes', style: TextStyle(color: Colors.white)),
                   backgroundColor: Colors.purple[300],
                 ),
               ],
@@ -56,12 +56,12 @@ class MyHomePage extends StatelessWidget {
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
               children: <Widget>[
-                shoppingItem('Apples', Icons.local_grocery_store, Colors.red),
+                shoppingItem('Apples', Icons.local_grocery_store, Colors.blue),
                 shoppingItem('Laptop', Icons.computer, Colors.blue),
-                shoppingItem('T-Shirt', Icons.checkroom, Colors.purple),
-                shoppingItem('Bananas', Icons.local_grocery_store, Colors.yellow),
-                shoppingItem('Headphones', Icons.headphones, Colors.orange),
-                shoppingItem('Shoes', Icons.shopping_bag, Colors.brown),
+                shoppingItem('T-Shirt', Icons.checkroom, Colors.blue),
+                shoppingItem('Bananas', Icons.local_grocery_store, Colors.blue),
+                shoppingItem('Headphones', Icons.headphones, Colors.blue),
+                shoppingItem('Shoes', Icons.shopping_bag, Colors.blue),
               ],
             ),
           ],
@@ -72,7 +72,7 @@ class MyHomePage extends StatelessWidget {
           print('Hello Shopping Mastermind');
         },
         child: Icon(Icons.add, color: Colors.white),
-        backgroundColor: Colors.red[600],
+        backgroundColor: Colors.black,  // 10% of the design color
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
@@ -84,12 +84,10 @@ class MyHomePage extends StatelessWidget {
             icon: Icon(Icons.shopping_cart),
             label: 'Cart',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle),
-            label: 'Profile',
-          ),
         ],
         selectedItemColor: Colors.amber[800],
+        unselectedItemColor: Colors.black,  // 10% of the design color
+        backgroundColor: Colors.blue[900],  // 60% of the design color
       ),
     );
   }
@@ -100,11 +98,11 @@ class MyHomePage extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(icon, size: 50, color: color),
+          Icon(icon, size: 50, color: Colors.blue),  // Blue icon
           SizedBox(height: 10),
           Text(
             title,
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black),  // 10% of the design color
           ),
           SizedBox(height: 10),
           Row(
@@ -112,18 +110,16 @@ class MyHomePage extends StatelessWidget {
             children: [
               TextButton(
                 onPressed: () {},
-                child: Text('View'),
-                style: TextButton.styleFrom(foregroundColor: color),
+                child: Text('Remove'),
+                style: TextButton.styleFrom(foregroundColor: Colors.blue),  // Blue text button
               ),
               ElevatedButton(
                 onPressed: () {},
                 child: Text('Buy'),
-                style: ElevatedButton.styleFrom(foregroundColor: color),
-              ),
-              OutlinedButton(
-                onPressed: () {},
-                child: Text('Remove'),
-                style: OutlinedButton.styleFrom(foregroundColor: color),
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.blue,  // Blue background
+                ),
               ),
             ],
           )
