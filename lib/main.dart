@@ -38,15 +38,15 @@ class MyHomePage extends StatelessWidget {
               children: [
                 Chip(
                   label: Text('Groceries', style: TextStyle(color: Colors.white)),
-                  backgroundColor: Colors.black,
+                  backgroundColor: Colors.grey,
                 ),
                 Chip(
                   label: Text('Electronics', style: TextStyle(color: Colors.white)),
-                  backgroundColor: Colors.black,
+                  backgroundColor: Colors.grey,
                 ),
                 Chip(
                   label: Text('Clothes', style: TextStyle(color: Colors.white)),
-                  backgroundColor: Colors.black,
+                  backgroundColor: Colors.grey,
                 ),
               ],
             ),
