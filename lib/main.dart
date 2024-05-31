@@ -87,7 +87,7 @@ class MyHomePage extends StatelessWidget {
         ],
         selectedItemColor: Colors.amber[800],
         unselectedItemColor: Colors.black,  // 10% of the design color
-        backgroundColor: Colors.blue[900],  // 60% of the design color
+        backgroundColor: Colors.white,  // 60% of the design color
       ),
     );
   }
